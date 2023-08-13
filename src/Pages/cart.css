@@ -1,0 +1,29 @@
+.cart--item {
+  display: grid;
+  grid-template-columns: 200px 240px 280px 230px 225px 80px;
+  align-items: center;
+}
+.remove--wrap {
+  padding: 5px;
+  width: 77px;
+  border-radius: 6px;
+}
+.button--cart {
+  border-radius: 10px;
+}
+.empty--container,
+.main--cart--wrapper {
+  margin-bottom: 400px;
+}
+.clear-cart--button {
+  align-items: center;
+  border-radius: 7px;
+}
+.clear-cart--button:hover {
+  background-color: white;
+  color: orange;
+}
+.remove--wrap:hover {
+  background-color: white;
+  color: orange;
+}

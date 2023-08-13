@@ -1,0 +1,21 @@
+.footer--container {
+  background-color: rgba(0, 0, 0, 0.193);
+  height: 100%;
+  width: 100%;
+  margin-top: 50px;
+}
+.footer--wrapper {
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+span {
+  cursor: pointer;
+  padding: 10px;
+  border-right: 2px solid rgba(255, 255, 255, 0.267);
+}
+.last--wrap {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+}

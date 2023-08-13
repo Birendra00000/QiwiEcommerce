@@ -1,0 +1,13 @@
+.main--conatiner--wrapper {
+  margin-top: 30px;
+}
+.second-product-wrap {
+  display: flex;
+  justify-content: center;
+}
+.head-wrap {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  color: gray;
+}

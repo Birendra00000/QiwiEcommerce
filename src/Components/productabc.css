@@ -1,0 +1,12 @@
+.card-image {
+  height: 200px;
+  width: 298px;
+}
+.product-item {
+  padding: 2px;
+}
+.product--conatiner {
+  display: grid;
+  grid-template-columns: 300px 300px 300px 300px;
+  gap: 10px;
+}
