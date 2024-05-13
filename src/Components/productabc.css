@@ -5,8 +5,13 @@
 .product-item {
   padding: 2px;
 }
+.main--product--conatiner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .product--conatiner {
   display: grid;
-  grid-template-columns: 300px 300px 300px 300px;
-  gap: 10px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 25px;
 }

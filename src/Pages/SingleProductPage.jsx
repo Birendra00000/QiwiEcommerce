@@ -69,14 +69,12 @@ const SingleProductPage = () => {
     return <Loader />;
   }
 
+  function handleClick() {
+    return alert("Playing!");
+  }
+
   return (
     <>
-      <div className="container--main--wrapper--first flex ml-10 mt-7 text-lg text-slate-600">
-        <Link to="/">
-          <span className="home--wrap">Home / </span>
-        </Link>
-        <span className="wrapper--one--tit ml-1"> {product.title}</span>
-      </div>
       <div className="single--product--container">
         <div className="product--wrap">
           <div className="main--container--single">
@@ -154,6 +152,7 @@ const SingleProductPage = () => {
                     size="2.2rem"
                     className="mx-3"
                     color="white"
+                    onClick={handleClick}
                   />
                   Add to Cart
                 </button>

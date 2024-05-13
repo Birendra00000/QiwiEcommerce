@@ -2,6 +2,8 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { FaTrash } from "react-icons/fa";
+import Breadcrumb from "react-bootstrap/Breadcrumb";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   getAllCarts,
   removeFromCart,
@@ -18,12 +20,11 @@ const CartPage = () => {
   if (carts.length === 0) {
     return (
       <>
-        <div className="container--main--wrapper--first flex ml-10 mt-7 text-lg text-slate-600">
-          <Link to="/">
-            <span className="home--wrap">Home / </span>
-          </Link>
-          <span className="wrapper--one--tit ml-1"> Cart</span>
-        </div>
+        <Breadcrumb className="ml-8 mt-4">
+          <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+
+          <Breadcrumb.Item active>Cart</Breadcrumb.Item>
+        </Breadcrumb>
         <div className="empty--container mt-20 ">
           <div className="cart--empty--page flex justify-center text-2xl font-bold ">
             <span className="wrapper--empty">Your Shopping Cart is empty</span>
@@ -37,38 +38,36 @@ const CartPage = () => {
       </>
     );
   }
-
   return (
     <>
-      <div className="container--main--wrapper--first flex ml-10 mt-7 text-lg text-slate-600">
-        <Link to="/">
-          <span className="home--wrap">Home / </span>
-        </Link>
-        <span className="wrapper--one--tit ml-1"> Cart</span>
-      </div>
+      <Breadcrumb className="ml-8 mt-4">
+        <Breadcrumb.Item href="/">Home</Breadcrumb.Item>
+
+        <Breadcrumb.Item active>Cart</Breadcrumb.Item>
+      </Breadcrumb>
       <div className="main--cart--wrapper  mt-20">
         <div className="cart--conatiner">
           <div className="cart--wrapper bg-white py-2 mx-4 ">
             <div className="wrapper--cart">
-              <div className="cart--header flex justify-between">
-                <div className="cart--snb">
+              <div className="cart--header grid  grid-cols-12">
+                <div className="cart--snb col-span-2">
                   <span className="sn--wrap">S.N.</span>
                 </div>
-                <div className="product--wrap">
+                <div className="product--wrap col-span-2 text-center">
                   <span className="cart--product">Product</span>
                 </div>
-                <div className="unit--wrap">
+                <div className="unit--wrap col-span-2">
                   <span className="priceunit--product">
                     Discount Percentage
                   </span>
                 </div>
-                <div className="qty--wrap">
+                <div className="qty--wrap col-span-2 text-center">
                   <span className="cart--quantity">Quantity</span>
                 </div>
-                <div className="total--wrap">
+                <div className="total--wrap col-span-2 text-center">
                   <span className="cart--totalPrice">Total Price</span>
                 </div>
-                <div className="action--wrap pr-2">
+                <div className="action--wrap pr-2 col-span-2 text-center">
                   <span className="cart--actionWrap">Action</span>
                 </div>
               </div>
@@ -78,25 +77,31 @@ const CartPage = () => {
           {carts.map((item, idx) => {
             return (
               <>
-                <div className="cart--item   mt-8 py-2  mx-7" key={item.id}>
-                  <div className="cart--crt--wrapper mx-3" key={item.id}>
+                <div
+                  className="grid grid-cols-12 mt-8 py-2  mx-7 items-center"
+                  key={item.id}
+                >
+                  <div
+                    className="cart--crt--wrapper mx-3  col-span-2"
+                    key={item.id}
+                  >
                     <div className="id--cont">{idx + 1}</div>
                   </div>
-                  <div className="cart--crt--wrapper">
+                  <div className="cart--crt--wrapper  col-span-2 text-center">
                     <div className="id--cont">{item.title}</div>
                   </div>
-                  <div className="cart--crt--wrapper">
+                  <div className="cart--crt--wrapper  col-span-2 text-center">
                     <div className="id--cont">{item.discountPercentage}%</div>
                   </div>
-                  <div className="cart--crt--wrapper">
+                  <div className="cart--crt--wrapper  col-span-2 text-center">
                     <div className="id--cont">{item.quantity}</div>
                   </div>
-                  <div className="cart--crt--wrapper">
+                  <div className="cart--crt--wrapper  col-span-2 text-center">
                     <div className="id--cont">${item.totalPrice}</div>
                   </div>
-                  <div className="remove--wrap bg-orange-500 text-white">
+                  <div className=" col-span-2 ml-auto mr-auto">
                     <button
-                      className="remove--wrap--abc"
+                      className="remove--wrap--abc  bg-orange-500 text-white  flex justify-center rounded-md p-2"
                       onClick={() => dispatch(removeFromCart(item.id))}
                     >
                       Remove
@@ -112,10 +117,10 @@ const CartPage = () => {
           className="clear--cart--wrappper flex ml-8 mt-10"
           onClick={() => dispatch(clearCart())}
         >
-          <button className="clear-cart--button flex align-middle bg-orange-500 text-white justify-center">
+          <button className="clear-cart--button flex align-middle bg-orange-500 text-white justify-center hover:bg-lime-500">
             <FaTrash />
 
-            <span className="cart--items--clear p-2">Clear Cart</span>
+            <span className="s--clear p-2">Clear Cart</span>
           </button>
         </div>
       </div>

@@ -8,17 +8,22 @@
 .Navbar--maincontainer {
   padding: 0;
 }
+
 .nav--card {
   background-color: rgba(158, 158, 158, 0.2);
   font-size: 12px;
-  height: 25px;
+  height: 70px;
   font-family: "Poppins", sans-serif;
   font-family: "Roboto Mono", monospace;
 }
 .list--wrapper {
   display: grid;
-  grid-template-columns: auto auto auto auto auto auto auto auto;
-  justify-content: space-around;
+  grid-template-columns: auto auto auto auto;
+  gap: 100px;
+  justify-content: center;
+  margin-left: 100px;
+  height: 100%;
+  align-items: center;
 }
 ul,
 li.listitem {
@@ -26,7 +31,7 @@ li.listitem {
   list-style-type: none;
 }
 .secondbar {
-  padding-top: 10px;
+  padding-top: 0;
   height: 75px;
 }
 .second-logobar {

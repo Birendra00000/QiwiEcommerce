@@ -1,7 +1,7 @@
 .category--wrap {
   width: 200px;
   background-color: #f5f5f5;
-  margin-top: 20px;
+  margin-top: 80px;
   padding: 10px 0 10px 10px;
   margin-left: 106px;
   margin-right: 4px;
@@ -19,8 +19,8 @@
 .slider--wrapper {
   width: 990px;
   position: absolute;
-  top: 120px;
-  right: 0;
+  top: 226px;
+  left: 300px;
 }
 .slider--image {
   width: 100%;

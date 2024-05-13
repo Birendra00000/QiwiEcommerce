@@ -6,7 +6,7 @@ const ProductPage = ({ product }) => {
   return (
     <Link to={`/product/${product.id}`} key={product.id}>
       <div className="product-item">
-        <div className="abc">
+        <div className="">
           <div className="card card-vertical d-flex direction-column relative shadow">
             <div className="card-image-container relative">
               <small className="c-badge bg-primary absolute left-0 top-0">

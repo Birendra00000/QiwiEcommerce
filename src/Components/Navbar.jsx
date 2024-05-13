@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./homepage.css";
 import { ImSearch } from "react-icons/im";
+
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
 import { getsideBarSliceStatus } from "../Store/SidebarSlice";
@@ -11,6 +12,8 @@ import {
   getCartTotal,
 } from "../Store/CartSlice";
 import { getAllCategories } from "../Store/CategorySlice";
+import SearchProduct from "../Pages/SearchProduct";
+
 const Navbar = () => {
   const dispatch = useDispatch();
   const categories = useSelector(getAllCategories);
@@ -19,6 +22,11 @@ const Navbar = () => {
   const itemsCount = useSelector(getCartsItemsCount);
 
   const [searchTerm, setSearch] = useState("");
+
+  const handleSearchTerm = (e) => {
+    e.preventDefault();
+    setSearch(e.target.value);
+  };
 
   useEffect(() => {
     dispatch(getCartTotal());
@@ -30,14 +38,16 @@ const Navbar = () => {
         <div className="nav-container">
           <div className="nav--card">
             <ul className="list--wrapper">
-              <li className="listitem ">SAVE MORE ON APP</li>
-              <li className="listitem">RECHARGE AND PAYMENTS</li>
-              <li className="listitem">SELL ON QIWI</li>
-              <li className="listitem">CUSTOMER CARE</li>
-              <li className="listitem">TRACK MY ORDER</li>
-              <li className="listitem">LOGIN </li>
-              <li className="listitem">SIGN UP</li>
-              <li className="listitem">LANGUAGE CHANGE</li>
+              <Link to="/">
+                <li className="listitem ">HOME</li>
+              </Link>
+              <Link to="/login">
+                <li className="listitem">LOGIN </li>
+              </Link>
+              <Link to="/register">
+                <li className="listitem">SIGN UP</li>
+              </Link>
+              <li className="listitem">CART</li>
             </ul>
           </div>
         </div>
@@ -59,14 +69,16 @@ const Navbar = () => {
                   className="search--item"
                   placeholder="Search in QiWi"
                   autoComplete="off"
+                  onChange={(e) => handleSearchTerm(e)}
                 />
               </div>
-
-              <div className="search--logo">
-                <button className="search--any-item">
-                  <ImSearch className="searchlogo" />
-                </button>
-              </div>
+              <Link to={`search/${searchTerm}`}>
+                <div className="search--logo">
+                  <button className="search--any-item">
+                    <ImSearch className="searchlogo" />
+                  </button>
+                </div>
+              </Link>
             </div>
             <Link to="/cart">
               <div className="cart--icon flex text-slate-500">

@@ -1,13 +1,9 @@
 .cart--item {
   display: grid;
-  grid-template-columns: 200px 240px 280px 230px 225px 80px;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   align-items: center;
 }
-.remove--wrap {
-  padding: 5px;
-  width: 77px;
-  border-radius: 6px;
-}
+
 .button--cart {
   border-radius: 10px;
 }

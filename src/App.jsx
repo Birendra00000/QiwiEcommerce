@@ -11,6 +11,8 @@ import {
 import store from "./Store/store";
 import { Provider } from "react-redux";
 import Footer from "./Components/Footer";
+import Login from "./Pages/login";
+import Register from "./Pages/Register";
 function App() {
   return (
     <>
@@ -31,6 +33,8 @@ function App() {
             {/* Search term */}
 
             <Route path="search/:searchTerm" element={<SearchProduct />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/register" element={<Register />} />
           </Routes>
         </BrowserRouter>
         <Footer />

@@ -61,7 +61,7 @@ const HomePage = () => {
                 <ProductList products={products} />
               )}
             </div>
-            {/* <div className="categorylist">
+            <div className="categorylist">
               <div className="cat--title">
                 <h2 className="title-wrap">{categories[0]}</h2>
               </div>
@@ -100,7 +100,7 @@ const HomePage = () => {
               ) : (
                 <ProductList products={catProductsFour} />
               )}
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

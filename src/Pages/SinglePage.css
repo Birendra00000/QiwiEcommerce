@@ -63,3 +63,10 @@
 .last--wrapper:hover {
   background-color: rgb(227, 174, 155);
 }
+.container--page--link {
+  display: flex;
+  margin-left: 32px;
+  margin-top: 70px;
+  font-size: larger;
+  color: slategrey;
+}
