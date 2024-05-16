@@ -179,6 +179,7 @@ button.search--any-item {
     height: 200px;
     border-top: 1px solid white;
     background-color: #f4f1f1;
+    z-index: 10;
   }
   .list--wrapper li {
     display: block;

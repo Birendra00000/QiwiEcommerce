@@ -15,3 +15,22 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 25px;
 }
+@media (max-width: 1100px) {
+  .card-image {
+    height: 90px;
+    width: 100%;
+  }
+  .product-item {
+    padding: 1px;
+  }
+  .main--product--conatiner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .product--conatiner {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    gap: 10px;
+  }
+}

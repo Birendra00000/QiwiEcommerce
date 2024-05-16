@@ -28,46 +28,41 @@ const HomePageSlider = () => {
   return (
     <div className="main--slider-wrap">
       <div className="category--wrap">
-        {categories.slice(0, 10).map((items) => (
-          <ul className="list--categories">
+        <ul className="list--categories">
+          {categories.slice(0, 10).map((items) => (
             <Link to={`category/${items}`}>
               <li className="list--items" key={items.id}>
                 {items}
               </li>
             </Link>
-          </ul>
-        ))}
+          ))}
+        </ul>
       </div>
       <div className="slider--wrapper">
-        <Slider {...settings}>
-          <div>
-            <img
-              src="./assests/sliderimage/slider1.jpg"
-              alt=""
-              className="slider--image"
-            />
-          </div>
-          <div>
-            <img
-              src="./assests/sliderimage/slider2.jpg"
-              alt=""
-              className="slider--image"
-            />
-          </div>
-          <div>
-            <img
-              src="./assests/sliderimage/slider3.jpg"
-              alt=""
-              className="slider--image"
-            />
-          </div>
-          <div>
-            <img
-              src="./assests/sliderimage/slider4.jpg"
-              alt=""
-              className="slider--image"
-            />
-          </div>
+        <Slider {...settings} className="slider--container">
+          <img
+            src="./assests/sliderimage/slider1.jpg"
+            alt=""
+            className="slider--image "
+          />
+
+          <img
+            src="./assests/sliderimage/slider2.jpg"
+            alt=""
+            className="slider--image"
+          />
+
+          <img
+            src="./assests/sliderimage/slider3.jpg"
+            alt=""
+            className="slider--image"
+          />
+
+          <img
+            src="./assests/sliderimage/slider4.jpg"
+            alt=""
+            className="slider--image"
+          />
         </Slider>
       </div>
     </div>

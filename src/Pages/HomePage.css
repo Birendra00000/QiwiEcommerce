@@ -11,3 +11,21 @@
   font-weight: bold;
   color: gray;
 }
+
+/* //FOR MOBILE DEVICES */
+
+@media (max-width: 1100px) {
+  .head-wrap {
+    font-size: 18px;
+  }
+  .second-product-wrap {
+    display: flex;
+    justify-content: center;
+  }
+  .head-wrap {
+    padding: 10px;
+    font-size: 24px;
+    font-weight: bold;
+    color: gray;
+  }
+}

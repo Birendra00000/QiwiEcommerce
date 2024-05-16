@@ -43,10 +43,12 @@ const Navbar = () => {
   return (
     <>
       <div className="Navbar--maincontainer">
-        <div className="nav-container">
+        <div className="nav-container ">
           <div className="nav--card">
             <ul
-              className={click ? "list--wrapper show--mobile" : "list--wrapper"}
+              className={
+                click ? "list--wrapper show--mobile " : "list--wrapper"
+              }
             >
               <Link to="/">
                 <li className="listitem ">HOME</li>
