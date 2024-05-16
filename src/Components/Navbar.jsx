@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./homepage.css";
 import { ImSearch } from "react-icons/im";
+import { GiHamburgerMenu } from "react-icons/gi";
 
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useSelector, useDispatch } from "react-redux";
@@ -15,6 +16,13 @@ import { getAllCategories } from "../Store/CategorySlice";
 import SearchProduct from "../Pages/SearchProduct";
 
 const Navbar = () => {
+  const [click, setClick] = useState(false);
+
+  const handleClick = () => {
+    setClick(!click);
+  };
+  console.log(click);
+
   const dispatch = useDispatch();
   const categories = useSelector(getAllCategories);
   const carts = useSelector(getAllCarts);
@@ -37,7 +45,9 @@ const Navbar = () => {
       <div className="Navbar--maincontainer">
         <div className="nav-container">
           <div className="nav--card">
-            <ul className="list--wrapper">
+            <ul
+              className={click ? "list--wrapper show--mobile" : "list--wrapper"}
+            >
               <Link to="/">
                 <li className="listitem ">HOME</li>
               </Link>
@@ -49,11 +59,14 @@ const Navbar = () => {
               </Link>
               <li className="listitem">CART</li>
             </ul>
+            <div className="hamburg--container ">
+              <GiHamburgerMenu onClick={handleClick} size={24} />
+            </div>
           </div>
         </div>
         <div className="secondbar">
           <div className="second-logobar">
-            <Link to="/">
+            <Link to="/" className="w-[20%]">
               <div className="img-logo">
                 <img
                   src="../assests/elogo.png"
@@ -72,7 +85,7 @@ const Navbar = () => {
                   onChange={(e) => handleSearchTerm(e)}
                 />
               </div>
-              <Link to={`search/${searchTerm}`}>
+              <Link to={`search/${searchTerm}`} className="w-[20%]">
                 <div className="search--logo">
                   <button className="search--any-item">
                     <ImSearch className="searchlogo" />
