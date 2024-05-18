@@ -85,11 +85,13 @@ const SingleProductPage = () => {
             />
           </div>
 
-          <div className="title--wrap">
+          <div className="title--wrap text-[14px] lg:text-[20px]">
             <h2>{product.title}</h2>
           </div>
           <div className="description--wrap mt-3">
-            <p className="description--container">{product.description}</p>
+            <p className="description--container text-[12px] lg:text-[16px]">
+              {product.description}
+            </p>
           </div>
           <div className="flex--container flex mt-2 text-orange-500 font-bold">
             <div className="rating--wrap">
@@ -98,28 +100,32 @@ const SingleProductPage = () => {
               </small>
             </div>
             <div className="brand--container">
-              <small className="brand mx-2">Brand:{product.brand}</small>
+              <small className="brand mx-2 text-[12px] lg:text-[16px]">
+                Brand:{product.brand}
+              </small>
             </div>
             <div className="category mx-2">
-              <small className="product--type">
+              <small className="product--type text-[12px] lg:text-[16px]">
                 Category:{product.category}
               </small>
             </div>
           </div>
           <div className="all--price--wrap flex align-middle mt-3">
             <div className="price--wrap font-extrabold ml-5 text-orange-600">
-              <p className="price--container text-2xl">${product.price}</p>
+              <p className="price--container text-[12px] lg:text-[16px]">
+                ${product.price}
+              </p>
             </div>
             <div className="discount--price--wrap ml-8 bg-orange-600 text-white rounded-lg	">
-              <p className="container--dicount">
+              <p className="container--dicount text-[12px] lg:text-[16px]">
                 {product.discountPercentage}%
               </p>
             </div>
           </div>
         </div>
-        <div className="button--container mt-20 ml-20  text-slate-700">
+        <div className="button--container mt-20  ml:0 lg:ml-20  text-slate-700">
           <div className="all-wrap--container flex ">
-            <div className="quantity--wrap font-bold text-xl text-slate-600">
+            <div className="quantity--wrap font-bold  text-lg lg:text-xl text-slate-600">
               Quantity:
             </div>
             <button
@@ -144,7 +150,7 @@ const SingleProductPage = () => {
             <Link to="/cart">
               <div className="add--cart--container bg-orange-400 flex align-middle justify-center">
                 <button
-                  className="cart--container flex align-middle text-lg text-white"
+                  className="cart--container text-lg flex align-middle  text-white text-[14px] lg:text-[18px] "
                   type="button"
                   onClick={() => addToCartHandler(product)}
                 >
@@ -159,7 +165,9 @@ const SingleProductPage = () => {
               </div>{" "}
             </Link>
             <div className="last--wrapper ml-9 bg-orange-400 p-2">
-              <button className="buy--items text-lg text-white">Buy Now</button>
+              <button className="buy--items text-white text-lg text-[14px] lg:text-[18px]">
+                Buy Now
+              </button>
             </div>
           </div>
         </div>

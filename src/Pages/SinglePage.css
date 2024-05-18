@@ -70,3 +70,25 @@
   font-size: larger;
   color: slategrey;
 }
+
+/* //FOR MOBILE RESONSIVE */
+
+@media (max-width: 1100px) {
+  .single--product--container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product--wrap {
+    width: 90%;
+  }
+
+  .title--wrap {
+    font-size: 26px;
+    font-weight: 600;
+    padding-top: 15px;
+  }
+}

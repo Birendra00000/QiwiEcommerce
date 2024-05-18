@@ -78,7 +78,7 @@ const CartPage = () => {
             return (
               <>
                 <div
-                  className="grid grid-cols-12 mt-8 py-2  mx-7 items-center"
+                  className="grid grid-cols-12 mt-8 py-2  mx-7 items-center lg:text-[16px] text-[11px]"
                   key={item.id}
                 >
                   <div
