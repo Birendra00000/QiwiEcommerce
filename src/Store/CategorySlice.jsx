@@ -45,6 +45,8 @@ export const fetchAsyncCategories = createAsyncThunk(
   async () => {
     const response = await fetch(`${Base_Url}products/categories`);
     const data = await response.json();
+    console.log("slice data", data);
+
     return data;
   }
 );

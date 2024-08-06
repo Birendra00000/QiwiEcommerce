@@ -14,6 +14,7 @@ import {
 import { STATUS } from "../utilities/StatusComponent";
 import Loader from "../Components/Loader";
 import ProductList from "../Components/ProductList";
+import SliderPage from "../Components/SliderPage";
 
 const HomePage = () => {
   const dispatch = useDispatch();
@@ -46,6 +47,7 @@ const HomePage = () => {
     <>
       <div className="main--container-wrapper">
         <div className="main-conatiner">
+          {" "}
           <HomePageSlider />
         </div>
         <div className="categories-conatiner">
