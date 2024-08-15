@@ -38,7 +38,7 @@
 
   .product--conatiner {
     display: grid;
-    grid-template-columns: 45% 45%;
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     gap: 10px;
   }
@@ -51,5 +51,13 @@
   }
   .cta-btn button {
     padding: 6px 0;
+  }
+}
+@media (max-width: 600px) {
+  .product--conatiner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 10px;
   }
 }

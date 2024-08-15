@@ -89,7 +89,7 @@ const SingleProductPage = () => {
             <h2>{product.title}</h2>
           </div>
           <div className="description--wrap mt-3">
-            <p className="description--container text-[12px] lg:text-[16px]">
+            <p className="description--container text-[12px] lg:text-[16px] w-[70%]">
               {product.description}
             </p>
           </div>

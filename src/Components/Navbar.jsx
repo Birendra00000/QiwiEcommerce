@@ -59,7 +59,9 @@ const Navbar = () => {
               <Link to="/register">
                 <li className="listitem">SIGN UP</li>
               </Link>
-              <li className="listitem">CART</li>
+              <Link to="/cart">
+                <li className="listitem">CART</li>
+              </Link>
             </ul>
             <div className="hamburg--container ">
               <GiHamburgerMenu onClick={handleClick} size={24} />

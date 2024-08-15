@@ -21,8 +21,8 @@ const HomePageSlider = ({ categories }) => {
   console.log("categories", categories);
   return (
     <div className="main--slider-wrap">
-      <div className="category--wrap">
-        {/* {Array.isArray(categories) ? (
+      {/* <div className="category--wrap"> */}
+      {/* {Array.isArray(categories) ? (
           categories.length > 0 ? (
             <ul className="list--categories">
               {categories.slice(0, 10).map((item, index) => {
@@ -40,16 +40,19 @@ const HomePageSlider = ({ categories }) => {
         ) : (
           <p>Unexpected data format.</p>
         )} */}{" "}
-        {categories.slice(0, 10).map((items) => (
-          <ul className="list--categories">
-            <Link to={`category/${items}`}>
-              <li className="list--items" key={items.id}>
-                {items}
-              </li>
-            </Link>
-          </ul>
-        ))}
-      </div>
+      {/* <ul className="list--categories">
+          {categories.slice(0, 10).map((item) => (
+            <>
+              {console.log("item.slug", item.slug)}
+              <Link to={`category/${item.slug}`}>
+                <li className="list--items" key={item.id}>
+                  {item.name}
+                </li>
+              </Link>
+            </>
+          ))}
+        </ul> */}
+      {/* </div> */}
       <div className="slider--wrapper">
         <Slider {...settings} className="slider--container">
           <img

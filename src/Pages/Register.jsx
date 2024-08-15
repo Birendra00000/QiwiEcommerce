@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
   return (
-    <div className="h-screen w-full flex justify-center items-center bg-blue-200">
-      <form className="h-[360px] bg-white w-[310px] rounded-lg">
+    <div className="h-full w-full flex justify-center items-center ">
+      <form className="h-[360px] shadow-lg bg-white w-[310px] rounded-lg mt-[5%]">
         <span className="h-[20%] items-center justify-center  flex text-[25px] text-skyblue">
           <h5>Sign Up</h5>
         </span>

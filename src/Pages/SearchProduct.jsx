@@ -23,7 +23,9 @@ const SearchProduct = () => {
   }, [searchTerm]);
 
   if (searchProducts.length === 0) {
-    return <>No Product Founds</>;
+    return (
+      <div className="mt-[45px] flex justify-center">No Product Founds</div>
+    );
   }
 
   return (

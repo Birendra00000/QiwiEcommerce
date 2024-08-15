@@ -31,7 +31,9 @@ const CartPage = () => {
           </div>
           <div className="button--cart flex justify-center mt-5 ">
             <Link to="/">
-              <button className="buy--wrap bg-yellow-600 p-3 ">Buy Now</button>
+              <button className="buy--wrap bg-orange-400 p-2 rounded-md">
+                Buy Now
+              </button>
             </Link>
           </div>
         </div>
@@ -50,10 +52,10 @@ const CartPage = () => {
           <div className="cart--wrapper bg-white py-2 mx-4 ">
             <div className="wrapper--cart">
               <div className="cart--header grid  grid-cols-12">
-                <div className="cart--snb col-span-2">
+                <div className="cart--snb col-span-1">
                   <span className="sn--wrap">S.N.</span>
                 </div>
-                <div className="product--wrap col-span-2 text-center">
+                <div className="product--wrap col-span-3 text-center">
                   <span className="cart--product">Product</span>
                 </div>
                 <div className="unit--wrap col-span-2">
@@ -75,20 +77,26 @@ const CartPage = () => {
           </div>
 
           {carts.map((item, idx) => {
+            // Convert totalPrice to a string if it's a number
+            const totalPriceStr =
+              typeof item.totalPrice === "number"
+                ? item.totalPrice.toFixed(2) // Converts number to string with two decimal places
+                : item.totalPrice;
+
             return (
               <>
                 <div
-                  className="grid grid-cols-12 mt-8 py-2  mx-7 items-center lg:text-[16px] text-[11px]"
+                  className="grid grid-cols-12 mt-8 py-2  mx-7 items-center lg:text-[16px] text-[8px] sm:text-[11px]"
                   key={item.id}
                 >
                   <div
-                    className="cart--crt--wrapper mx-3  col-span-2"
+                    className="cart--crt--wrapper mx-3  col-span-1"
                     key={item.id}
                   >
                     <div className="id--cont">{idx + 1}</div>
                   </div>
-                  <div className="cart--crt--wrapper  col-span-2 text-center">
-                    <div className="id--cont">{item.title}</div>
+                  <div className="cart--crt--wrapper  col-span-3 text-center">
+                    <div className="id--cont ">{item.title}</div>
                   </div>
                   <div className="cart--crt--wrapper  col-span-2 text-center">
                     <div className="id--cont">{item.discountPercentage}%</div>
@@ -97,11 +105,11 @@ const CartPage = () => {
                     <div className="id--cont">{item.quantity}</div>
                   </div>
                   <div className="cart--crt--wrapper  col-span-2 text-center">
-                    <div className="id--cont">${item.totalPrice}</div>
+                    <div className="id--cont">{totalPriceStr.slice(0, 4)}</div>
                   </div>
                   <div className=" col-span-2 ml-auto mr-auto">
                     <button
-                      className="remove--wrap--abc  bg-orange-500 text-white  flex justify-center rounded-md p-2"
+                      className="remove--wrap--abc  bg-orange-500 text-white  flex justify-center rounded-md p-2 hover:bg-orange-300"
                       onClick={() => dispatch(removeFromCart(item.id))}
                     >
                       Remove
@@ -117,7 +125,7 @@ const CartPage = () => {
           className="clear--cart--wrappper flex ml-8 mt-10"
           onClick={() => dispatch(clearCart())}
         >
-          <button className="clear-cart--button flex align-middle bg-orange-500 text-white justify-center hover:bg-lime-500">
+          <button className="clear-cart--button flex align-middle bg-orange-500 text-white justify-center hover:bg-orange-300">
             <FaTrash />
 
             <span className="s--clear p-2">Clear Cart</span>
