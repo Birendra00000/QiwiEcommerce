@@ -4,8 +4,12 @@ import "./productabc.css";
 
 const ProductPage = ({ product }) => {
   return (
-    <Link to={`/product/${product.id}`} key={product.id}>
-      <div className="card card-vertical d-flex direction-column relative shadow">
+    <Link
+      to={`/product/${product.id}`}
+      key={product.id}
+      className="flex justify-center"
+    >
+      <div className="card card-vertical d-flex direction-column relative shadow w-[90%]">
         <div className="card-image-container relative">
           <small className="c-badge bg-black text-white absolute left-0 top-0 text-3 lg:text-lg">
             {product.category}
