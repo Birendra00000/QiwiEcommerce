@@ -83,7 +83,7 @@ const Navbar = () => {
               <div className="search--bar">
                 <input
                   type="search"
-                  className="search--item"
+                  className="search--item text-[12px] md:text[16px] lg:text-[16px]"
                   placeholder="Search in QiWi"
                   autoComplete="off"
                   onChange={(e) => handleSearchTerm(e)}
@@ -100,7 +100,9 @@ const Navbar = () => {
             <Link to="/cart">
               <div className="cart--icon flex text-slate-500">
                 <AiOutlineShoppingCart size="2.8rem" className="cart-logo" />
-                <span className="no--of-qty text-2xl">{itemsCount}</span>
+                <span className="no--of-qty text-[12px]  lg:text-[16px]">
+                  {itemsCount}
+                </span>
               </div>
             </Link>
           </div>

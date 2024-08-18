@@ -51,9 +51,7 @@
 .addtocart--wrap {
   align-items: center;
 }
-.all-wrap--container {
-  width: 280px;
-}
+
 .last--wrapper {
   border-radius: 6px;
 }
@@ -91,4 +89,10 @@
     font-weight: 600;
     padding-top: 15px;
   }
+
+  /* @media (max-width: 600px) {
+    .quantity--wrap {
+      padding: 6px;
+    }
+  } */
 }

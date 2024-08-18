@@ -14,6 +14,8 @@ import { AiOutlineMinus } from "react-icons/ai";
 import { AiOutlinePlus } from "react-icons/ai";
 import { AiOutlineShoppingCart } from "react-icons/ai";
 import { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 import {
   addToCart,
   getCartMessageStatus,
@@ -73,6 +75,8 @@ const SingleProductPage = () => {
     return alert("Playing!");
   }
 
+  const notify = () => toast("Wow so easy!");
+
   return (
     <>
       <div className="single--product--container">
@@ -124,22 +128,22 @@ const SingleProductPage = () => {
           </div>
         </div>
         <div className="button--container mt-20  ml:0 lg:ml-20  text-slate-700">
-          <div className="all-wrap--container flex ">
-            <div className="quantity--wrap font-bold  text-lg lg:text-xl text-slate-600">
+          <div className="all-wrap--container flex w-[220px] lg:w-[280px]  ">
+            <div className="quantity--wrap font-bold  text-[12px] lg:text-xl text-slate-600">
               Quantity:
             </div>
             <button
-              className="minus--wrap mr-3 text-xl "
+              className="minus--wrap mr-3  text-[12px] lg:text-xl "
               onClick={() => decreaseQuantity()}
             >
               <AiOutlineMinus />
             </button>
-            <button className="quantity--container mr-3  text-xl">
+            <button className="quantity--container mr-3 text-[12px] lg:text-xl">
               {quantity}
             </button>
             <button
               type="button"
-              className="plus--wrapper mr-3  text-xl"
+              className="plus--wrapper mr-3  text-[12px] lg:text-[16px]"
               onClick={() => increaseQuantity()}
             >
               <AiOutlinePlus />
@@ -150,12 +154,12 @@ const SingleProductPage = () => {
             <Link to="/cart">
               <div className="add--cart--container bg-orange-400 flex align-middle justify-center">
                 <button
-                  className="cart--container text-lg flex align-middle  text-white text-[14px] lg:text-[18px] "
+                  className="cart--container  flex align-middle  text-white text-[12px] lg:text-[16px] font-medium"
                   type="button"
                   onClick={() => addToCartHandler(product)}
                 >
                   <AiOutlineShoppingCart
-                    size="2.2rem"
+                    size="28"
                     className="mx-3"
                     color="white"
                     onClick={handleClick}
@@ -165,7 +169,7 @@ const SingleProductPage = () => {
               </div>{" "}
             </Link>
             <div className="last--wrapper ml-9 bg-orange-400 p-2">
-              <button className="buy--items text-white text-lg text-[14px] lg:text-[18px]">
+              <button className="buy--items text-white text-[12px] lg:text-[16px]">
                 Buy Now
               </button>
             </div>

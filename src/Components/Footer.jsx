@@ -4,7 +4,7 @@ import "./footer.css";
 const Footer = () => {
   return (
     <div className="footer--container">
-      <div className="footer--container">
+      <div className="footer--container text-[12px] lg:text-[16px]">
         <div className="footer--wrapper">
           <span>Privacy Policy</span>
 
