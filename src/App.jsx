@@ -11,7 +11,7 @@ import {
 import store from "./Store/store";
 import { Provider } from "react-redux";
 import Footer from "./Components/Footer";
-import Login from "./Pages/login";
+import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 function App() {
   return (
