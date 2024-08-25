@@ -71,12 +71,6 @@ const SingleProductPage = () => {
     return <Loader />;
   }
 
-  function handleClick() {
-    return alert("Playing!");
-  }
-
-  const notify = () => toast("Wow so easy!");
-
   return (
     <>
       <div className="single--product--container">
@@ -162,7 +156,6 @@ const SingleProductPage = () => {
                     size="28"
                     className="mx-3"
                     color="white"
-                    onClick={handleClick}
                   />
                   Add to Cart
                 </button>

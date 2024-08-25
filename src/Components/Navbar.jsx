@@ -47,7 +47,7 @@ const Navbar = () => {
           <div className="nav--card">
             <ul
               className={
-                click ? "list--wrapper show--mobile " : "list--wrapper"
+                click ? "list--wrapper show--mobile  " : "list--wrapper"
               }
             >
               <Link to="/">

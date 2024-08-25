@@ -31,7 +31,7 @@ const CartPage = () => {
           </div>
           <div className="button--cart flex justify-center mt-5 ">
             <Link to="/">
-              <button className="buy--wrap bg-orange-400 p-2 rounded-md">
+              <button className="buy--wrap bg-black py-2 px-3 rounded-md text-white">
                 Buy Now
               </button>
             </Link>
