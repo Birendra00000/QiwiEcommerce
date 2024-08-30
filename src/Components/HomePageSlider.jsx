@@ -40,18 +40,18 @@ const HomePageSlider = ({ categories }) => {
         ) : (
           <p>Unexpected data format.</p>
         )} */}{" "}
-      {/* <ul className="list--categories">
-          {categories.slice(0, 10).map((item) => (
+      <ul className="list--categories">
+        {categories &&
+          categories.slice(0, 10).map((item) => (
             <>
               {console.log("item.slug", item.slug)}
-              <Link to={`category/${item.slug}`}>
-                <li className="list--items" key={item.id}>
-                  {item.name}
-                </li>
-              </Link>
+
+              <li className="list--items" key={item.id}>
+                {item.name}
+              </li>
             </>
           ))}
-        </ul> */}
+      </ul>
       {/* </div> */}
       <div className="slider--wrapper">
         <Slider {...settings} className="slider--container">
